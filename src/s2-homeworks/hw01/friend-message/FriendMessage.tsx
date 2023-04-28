@@ -1,8 +1,17 @@
 import React from 'react'
 import s from './FriendMessage.module.css'
+import avatar from "../avatar.png"
+type FriendMessage = {
+    message: string,
+    id:number,
 
+}
+type FriendMessagePropsType ={
+    message:FriendMessage,
+
+}
 // создать тип вместо any и отобразить приходящие данные
-const FriendMessage = (props: any) => {
+const FriendMessage = (props: FriendMessagePropsType) => {
     return (
         <div
             id={'hw1-friend-message-' + props.message.id}
@@ -21,7 +30,7 @@ const FriendMessage = (props: any) => {
                         className={s.friendName}
                     >
                         {/*создаёт студент*/}
-
+                        {<ul></ul>}
                         {/**/}
                     </div>
                     <pre
