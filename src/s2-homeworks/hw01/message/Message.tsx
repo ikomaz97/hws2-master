@@ -1,8 +1,15 @@
 import React from 'react'
 import s from './Message.module.css'
-
+import avatar from "../avatar.png"
 // нужно создать правильный тип вместо any
-export type MessagePropsType = any
+export type Message = {
+    message: string,
+    id:number,
+}
+type MessagePropsType ={
+    message:Message,
+
+}
 
 // нужно отобразить приходящие данные
 const Message = (props: MessagePropsType) => {
