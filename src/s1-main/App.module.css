@@ -1,11 +1,84 @@
 .App {
     --header_height: 60px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .hw {
+    background-color: #FFFFFF;
+    border: 2px solid yellowgreen;
+    border-radius: 5px;
+    padding: 20px;
 
 }
 
 .hwTitle {
+    background-color: #FFFFFF;
+    border: 2px solid yellowgreen;
+    border-radius: 5px;
+    padding: 20px;
 
 }
+
+
+.s.message {
+
+
+}
+
+.s.imageAndText {
+
+}
+
+.s.name {
+
+}
+
+.s.messageText {
+
+
+}
+
+.s.time {
+
+}
+
+
+
+
+.s.friendMessage {
+
+}
+
+.s.friendImageAndText {
+
+}
+
+
+.s.friendText {
+
+}
+
+
+
+.s.friendMessageText {
+
+}
+
+
+.s.friendTime {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
