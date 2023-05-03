@@ -3,7 +3,9 @@
 }
 
 .imageAndText {
-
+    display: flex;
+    justify-content: flex-end;
+background: red;
 }
 
 .imageAndText img {
