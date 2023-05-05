@@ -1,12 +1,11 @@
 import React from 'react'
-import { AffairType } from '../../HW2'
+
 import s from './Affair.module.css'
 import s2 from '../Affairs.module.css'
+import {AffairType} from "../../HW2";
 
-type AffairType = {
-    priority: string
-    _id: number
-}
+
+
 
 type AffairPropsType = {
     // key не нужно типизировать

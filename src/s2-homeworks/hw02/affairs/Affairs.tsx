@@ -3,8 +3,10 @@ import Affair from './affair/Affair'
 import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
+
+
 type AffairsPropsType = {
-    data: any // need to fix any
+    data: AffairType[] // need to fix any
     setFilter: any  //(filter: FilterType) => void -запоминай, как типизируется useState
     deleteAffairCallback: any  //не забывай, что функция сюда приехала не пустой
     filter: FilterType
