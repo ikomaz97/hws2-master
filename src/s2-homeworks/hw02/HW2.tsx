@@ -37,13 +37,13 @@ const defaultAffairs: AffairType[] = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: any[], filter: any): any[] => { // need to fix any
+export const filterAffairs = (affairs: AffairType[], filter: any): AffairType[] => { // need to fix any
     //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
     //а вот если пришло другое значение...
 
     return affairs // need to fix
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
+export const deleteAffair = (affairs: AffairType[], _id: any): AffairType[] => { // need to fix any
     // need to fix
     // отбрасывай при помощи метода filter лишних affairs
     return affairs
