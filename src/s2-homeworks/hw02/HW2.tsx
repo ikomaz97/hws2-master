@@ -23,27 +23,28 @@ export type AffairPriorityType = 'middle' | 'low' |  'high'
 export type AffairType = {
     _id: number // need to fix any
     name: string // need to fix any
-    priority: AffairPriorityType
+    priority: "high" | "middle" | "low"
 }
-export type FilterType = 'all' | AffairPriorityType
+export type FilterType = "all" | "high" | "middle" | "low"
 
 // constants
-const defaultAffairs: AffairType[] = [ // need to fix any
+const defaultAffairs: = useState ([
     {_id: 1, name: 'React', priority: 'high'}, // студенты могут изменить содержимое name и количество элементов в массиве, ...priority не менять!
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
     {_id: 4, name: 'work', priority: 'high'},
     {_id: 5, name: 'html & css', priority: 'middle'},
-]
+])
+
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType[], filter: any): AffairType[] => { // need to fix any
+export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
     //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
     //а вот если пришло другое значение...
 
     return affairs // need to fix
 }
-export const deleteAffair = (affairs: AffairType[], _id: any): AffairType[] => { // need to fix any
+export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
     // need to fix
     // отбрасывай при помощи метода filter лишних affairs
     return affairs
