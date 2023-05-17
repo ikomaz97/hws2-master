@@ -18,8 +18,7 @@ export type AffairsPropsType = {
             props.setFilter('all');
         };
         const deleteAffairCallback = (id: number) => {
-            const filteredAffairs = props.data.filter((affair) => affair._id !== id);
-            props.setAffairs(filteredAffairs);
+            props.deleteAffairCallback(id)
         };
 
     const setHigh = () => {
@@ -48,7 +47,7 @@ export type AffairsPropsType = {
         <Affair
             key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
             affair={a}
-            deleteAffairCallback={props.deleteAffairCallback}
+            deleteAffairCallback={deleteAffairCallback}
         />
     ))
 
