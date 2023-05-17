@@ -10,7 +10,7 @@ import s2 from '../../s1-main/App.module.css'
 * 5 - указать нужный тип в useState с affairs
 * 6 - дописать тип и логику функции deleteAffairCallback
 * 7 - в файле Affairs.tsx дописать типизацию пропсов
-* 8 - в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow
+* 8 - в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow +
 * 9 - в файле Affair.tsx дописать типизацию пропсов
 * 10 - в файле Affair.tsx дописать функции deleteCallback и использовать
 * 11 - в файле Affair.tsx отобразить приходящие данные
@@ -35,17 +35,18 @@ const defaultAffairs: AffairType[] = [ // need to fix any
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: AffairType[], filter: FilterType): any => { // need to fix any
-    //если пришел фильтр "all"...может нам вообще не фильтровать, а вернуть все?
-    //а вот если пришло другое значение...
+export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => {
+    if (filter === 'all') {
+        return affairs;
+    } else {
+        return affairs.filter((a: AffairType) => a.priority === filter);
+    }
+};
 
-    return affairs // need to fix
-}
-export const deleteAffair = (affairs: AffairType[], _id: number): any => { // need to fix any
-    // need to fix
-    // отбрасывай при помощи метода filter лишних affairs
-    return affairs
-}
+export const deleteAffair = (affairs: AffairType[], _id:number): AffairType[] => {
+    return affairs.filter((a: AffairType) => a._id !== _id);
+};
+
 
 function HW2() {
     const [affairs, setAffairs] = useState<AffairType[]>(defaultAffairs) // need to fix any
@@ -64,6 +65,7 @@ function HW2() {
             <div className={s2.hwTitle}>Homework #2</div>
             <div className={s2.hw}>
                 <Affairs
+                    setAffairs={setAffairs}
                     data={filteredAffairs}
                     filter={filter}          // ого useState передаем!
                     setFilter={setFilter}    // ого useState передаем!
