@@ -1,16 +1,12 @@
 import React from 'react'
-
+import { AffairType } from '../../HW2'
 import s from './Affair.module.css'
 import s2 from '../Affairs.module.css'
-import {AffairType} from "../../HW2";
 
-
-
-
-type AffairPropsType = {
+export type AffairPropsType = {
     // key не нужно типизировать
     affair: AffairType
-    deleteAffairCallback: any // need to fix any
+    deleteAffairCallback: ()=> {} // need to fix any
 }
 
 function Affair(props: AffairPropsType) {
@@ -24,7 +20,6 @@ function Affair(props: AffairPropsType) {
         // в HW2 находим deleteAffairCallback- это и есть наш клиент ->
         // deleteAffairCallback вызовет setAffairs(...) и   deleteAffair(...)
     }
-
 
     const nameClass = s.name + ' ' + s2[props.affair.priority]
     const buttonClass = s.closeButton + ' ' + s2[props.affair.priority]
